@@ -1,10 +1,24 @@
 @import "tailwindcss";
 
-body {
-  background-color: #F9F6EE;
-  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+:root {
+  --background: #f9f6ee;
+  --foreground: #171717;
 }
 
-code, pre {
-  font-family: 'Ubuntu Mono', monospace;
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b011a;
+    --foreground: #f9f4d6;
+  }
+}
+
+code,
+pre {
+  font-family: "Ubuntu Mono", monospace;
 }
