@@ -4,11 +4,11 @@ export default function About() {
       <div>
         <h1 className="font-bold underline text-2xl mb-2">About:</h1>
         <p className="font-mono">
-          I'm a 21-year-old computer science student, expected to graduate in
-          2027. I'm passionate about software development, backend engineering,
+          I&#39;m a 21-year-old computer science student, expected to graduate in
+          2027. I&#39;m passionate about software development, backend engineering,
           and data analysis. In my free time, I build small projects to sharpen
           my skills, primarily using ASP.NET Web API with MongoDB for REST APIs
-          and Python for data analysis. Recently, I've started exploring large
+          and Python for data analysis. Recently, I&#39;ve started exploring large
           language models and machine learning to deepen my understanding of how
           AI works.
         </p>
