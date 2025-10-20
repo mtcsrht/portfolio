@@ -17,8 +17,8 @@ const ubuntuMono = Ubuntu_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mate Cserhati",
-  description: "My portfolio",
+  title: "Home - Mate Cserhati",
+  description: "Home page of my portfolio",
 };
 
 export default function RootLayout({

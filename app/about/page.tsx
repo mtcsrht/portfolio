@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About - Mate Cserhati",
+  description: "About page",
+};
 export default function About() {
   return (
     <div className="grid grid-cols-1 justify-items-center mx-auto mt-10 text-justify p-5 sm:p-0 sm:w-128    ">
