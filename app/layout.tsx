@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       
       <body
-        className={`${ubuntu.variable} ${ubuntuMono.variable} antialiased`}
+        className={`${ubuntu.variable} ${ubuntuMono.variable} antialiased container mx-auto flex flex-col justify-between h-screen`}
       >
         <Navbar/>
         {children}
