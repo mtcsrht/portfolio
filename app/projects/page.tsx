@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects - Mate Cserhati",
+  description: "My portfolio projects showcase",
+};
+
 export default function Projects() {
 
   
   return (
     <div className="grid grid-cols-1 gap-30 justify-items-center mx-auto mt-5 p-8">
-      <div>
+      <div className="w-full max-w-2xl">
         <h1 className="font-bold text-2xl">URL Shortener</h1>
         <div className="flex flex-col sm:flex-row sm:gap-5 font-mono mt-5">
           <a
@@ -65,7 +72,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div>
+      <div className="w-full max-w-2xl">
         <h1 className="font-bold text-2xl">Cliphive Backend</h1>
         <div className="flex flex-col sm:flex-row sm:gap-5 font-mono mt-5">
           <a
@@ -119,7 +126,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div>
+      <div className="w-full max-w-2xl">
         <h1 className="font-bold text-2xl">Lost Animal Project</h1>
         <div className="flex flex-col sm:flex-row sm:gap-5 font-mono mt-5">
           <a
