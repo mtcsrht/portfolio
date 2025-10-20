@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="grid grid-cols-1 justify-items-center mx-auto mt-10 text-justify p-5 sm:p-0 sm:w-128    ">
       <div>
-        <h1 className="font-bold underline text-2xl mb-2">About:</h1>
+        <h1 className="font-bold underline text-2xl mb-2">About</h1>
         <p className="font-mono">
           I&#39;m a 21-year-old computer science student, expected to graduate in
           2027. I&#39;m passionate about software development, backend engineering,
