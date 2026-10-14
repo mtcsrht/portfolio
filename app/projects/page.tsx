@@ -73,10 +73,10 @@ export default function Projects() {
       </div>
 
       <div className="w-full max-w-2xl">
-        <h1 className="font-bold text-2xl">Cliphive Backend</h1>
+        <h1 className="font-bold text-2xl">Forza Horizon 6 Telemetry</h1>
         <div className="flex flex-col sm:flex-row sm:gap-5 font-mono mt-5">
           <a
-            href="https://github.com/mtcsrht/Cliphive.Backend"
+            href="https://github.com/mtcsrht/forza-horizon-6-telemetry"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
@@ -89,48 +89,58 @@ export default function Projects() {
           <ul className="flex flex-col sm:flex-row justify-between">
             <li>
               <a
-                href="https://dotnet.microsoft.com/"
+                href="https://go.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                C# ASP.NET Core
+                Go
               </a>
             </li>
             <li>
               <a
-                href="https://www.mongodb.com/"
+                href="https://react.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                MongoDB
+                React
               </a>
             </li>
             <li>
               <a
-                href="https://jwt.io/"
+                href="https://recharts.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                JWT Authentication
+                Recharts
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                WebSocket
               </a>
             </li>
           </ul>
         </div>
         <div className="mt-5 font-sans text-justify">
           <p>
-            A modular and scalable Web API backend service that provides user authentication, content management, billing, and tagging capabilities. Features JWT-based authentication, MongoDB data storage, and RESTful API endpoints for a content sharing platform.
+            A real-time telemetry dashboard for Forza Horizon and Forza Motorsport. A Go backend listens for the game&#39;s &quot;Data Out&quot; UDP packets, parses the binary payload and broadcasts it over WebSocket to every connected browser. The React frontend shows a live RPM gauge with redline, gear, throttle and brake inputs, power and torque, along with charts of the last 20 seconds. Finished sessions are saved and can be reviewed later or downloaded as JSON.
           </p>
         </div>
       </div>
 
       <div className="w-full max-w-2xl">
-        <h1 className="font-bold text-2xl">Lost Animal Project</h1>
+        <h1 className="font-bold text-2xl">Go Docker</h1>
         <div className="flex flex-col sm:flex-row sm:gap-5 font-mono mt-5">
           <a
-            href="https://github.com/mtcsrht/lostanimal-project"
+            href="https://github.com/mtcsrht/go-docker"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
@@ -143,39 +153,83 @@ export default function Projects() {
           <ul className="flex flex-col sm:flex-row justify-between">
             <li>
               <a
-                href="https://laravel.com/"
+                href="https://go.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                Laravel
+                Go
               </a>
             </li>
             <li>
               <a
-                href="https://www.php.net/"
+                href="https://docs.docker.com/reference/api/engine/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                PHP
+                Docker Engine API
               </a>
             </li>
             <li>
               <a
-                href="https://www.mysql.com/"
+                href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                MySQL
+                WebSocket
               </a>
             </li>
           </ul>
         </div>
         <div className="mt-5 font-sans text-justify">
           <p>
-            A community-based lost animal finder web application that helps pet owners and finders connect. Users can view lost animals near them across Hungary, register to upload missing pet information, and use an integrated chat system to communicate with worried owners.
+            A container management service written in Go on top of the Docker Engine API. Its REST API creates, lists, starts, stops and removes containers, pulling images and provisioning volumes automatically. Ready-made templates spin up game servers such as Minecraft in small, medium or large sizes. Container logs, an interactive shell and the server console are streamed to the browser over WebSocket.
+          </p>
+        </div>
+      </div>
+
+      <div className="w-full max-w-2xl">
+        <h1 className="font-bold text-2xl">HTTP Server</h1>
+        <div className="flex flex-col sm:flex-row sm:gap-5 font-mono mt-5">
+          <a
+            href="https://github.com/mtcsrht/http-server"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            repository
+          </a>
+        </div>
+        <div className="mt-5">
+          <h2 className="font-bold text-xl">Stack:</h2>
+          <ul className="flex flex-col sm:flex-row justify-between">
+            <li>
+              <a
+                href="https://www.rust-lang.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Rust
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://doc.rust-lang.org/std/net/struct.TcpListener.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                std::net
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="mt-5 font-sans text-justify">
+          <p>
+            An HTTP server built from scratch in Rust using only the standard library, with no external crates. It accepts raw TCP connections, parses the request line, headers and body into structured requests, and builds responses with status lines and headers. A learning project for understanding how HTTP works under the hood.
           </p>
         </div>
       </div>
