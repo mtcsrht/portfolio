@@ -5,20 +5,21 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const ubuntu = Ubuntu({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "700"],
   variable: "--font-ubuntu",
 });
 
 const ubuntuMono = Ubuntu_Mono({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "700"],
   variable: "--font-ubuntu-mono",
 });
 
 export const metadata: Metadata = {
   title: "Home - Mate Cserhati",
-  description: "Home page of my portfolio",
+  description:
+    "Máté Cserháti – software engineer and AI / machine learning student in Budapest.",
 };
 
 export default function RootLayout({
@@ -28,13 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
       <body
-        className={`${ubuntu.variable} ${ubuntuMono.variable} antialiased container mx-auto flex flex-col justify-between h-screen`}
+        className={`${ubuntu.variable} ${ubuntuMono.variable} font-sans antialiased flex min-h-screen flex-col`}
       >
-        <Navbar/>
-        {children}
-        <Footer/>
+        <Navbar />
+        <main className="mx-auto w-full max-w-2xl flex-1 px-6">{children}</main>
+        <Footer />
       </body>
     </html>
   );
