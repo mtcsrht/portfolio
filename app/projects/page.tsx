@@ -21,6 +21,18 @@ const projects: Project[] = [
     links: [],
   },
   {
+    title: "Cosmetic Service Booking",
+    description:
+      "A booking backend for a cosmetics salon. Customers pick a free time and request an appointment without an account, then view, add to their calendar or cancel it through a secret link. The salon accepts or rejects requests, books walk-in customers and closes days, with admin endpoints secured by short-lived JWT access tokens. A Postgres exclusion constraint makes double bookings impossible even under concurrent requests, and emails go through a transactional outbox with retries, so an outage only delays them. Health-related notes need explicit consent and personal data is cleaned up automatically, in line with GDPR.",
+    stack: ["Java", "Spring Boot", "PostgreSQL", "OpenTelemetry", "Docker"],
+    links: [
+      {
+        label: "repository",
+        href: "https://github.com/mtcsrht/cosmetic-service-booking",
+      },
+    ],
+  },
+  {
     title: "Forza Horizon 6 Telemetry",
     description:
       "A real-time telemetry dashboard for Forza Horizon and Forza Motorsport. A Go backend listens for the game's \"Data Out\" UDP packets, parses the binary payload and broadcasts it over WebSocket to every connected browser. The React frontend shows a live RPM gauge with redline, gear, throttle and brake inputs, power and torque, along with charts of the last 20 seconds. Finished sessions are saved and can be reviewed later or downloaded as JSON.",
