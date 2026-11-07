@@ -10,6 +10,7 @@ type Project = {
   description: string;
   stack: string[];
   links: { label: string; href: string }[];
+  private?: boolean;
 };
 
 const projects: Project[] = [
@@ -25,12 +26,8 @@ const projects: Project[] = [
     description:
       "A booking backend for a cosmetics salon. Customers pick a free time and request an appointment without an account, then view, add to their calendar or cancel it through a secret link. The salon accepts or rejects requests, books walk-in customers and closes days, with admin endpoints secured by short-lived JWT access tokens. A Postgres exclusion constraint makes double bookings impossible even under concurrent requests, and emails go through a transactional outbox with retries, so an outage only delays them. Health-related notes need explicit consent and personal data is cleaned up automatically, in line with GDPR.",
     stack: ["Java", "Spring Boot", "PostgreSQL", "OpenTelemetry", "Docker"],
-    links: [
-      {
-        label: "repository",
-        href: "https://github.com/mtcsrht/cosmetic-service-booking",
-      },
-    ],
+    links: [],
+    private: true,
   },
   {
     title: "Forza Horizon 6 Telemetry",
@@ -64,6 +61,7 @@ const projects: Project[] = [
       "A Counter-Strike trading platform built in a 2-person team. I owned the frontend and API integration end-to-end based on client requirements, managing tasks in Trello following Agile.",
     stack: ["Next.js", "Tailwind CSS"],
     links: [],
+    private: true,
   },
   {
     title: "URL Shortener",
@@ -93,8 +91,11 @@ export default function Projects() {
           >
             <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
               <h2 className="text-lg font-medium">{p.title}</h2>
-              {p.links.length > 0 && (
+              {(p.links.length > 0 || p.private) && (
                 <div className="flex gap-4 font-mono text-sm">
+                  {p.private && (
+                    <span className="text-muted">private project</span>
+                  )}
                   {p.links.map((l) => (
                     <a
                       key={l.href}
