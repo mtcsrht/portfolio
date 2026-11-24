@@ -38,8 +38,11 @@ export default async function ProjectPage({ params }: Props) {
       </Link>
       <h1 className="mt-4 text-3xl font-bold tracking-tight">{project.title}</h1>
 
-      {project.links.length > 0 && (
+      {(project.links.length > 0 || project.private) && (
         <div className="mt-3 flex gap-4 font-mono text-sm">
+          {project.private && (
+            <span className="text-muted">private project</span>
+          )}
           {project.links.map((l) => (
             <a
               key={l.href}

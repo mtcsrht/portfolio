@@ -14,6 +14,7 @@ export type Project = {
   description: string;
   stack: string[];
   links: ProjectLink[];
+  private?: boolean;
   sections: ProjectSection[];
   image?: { src: string; alt: string };
 };
@@ -52,6 +53,7 @@ export const projects: Project[] = [
       "A booking backend for a cosmetics salon. Customers pick a free time and request an appointment without an account, then view, add to their calendar or cancel it through a secret link. The salon accepts or rejects requests, books walk-in customers and closes days, with admin endpoints secured by short-lived JWT access tokens. A Postgres exclusion constraint makes double bookings impossible even under concurrent requests, and emails go through a transactional outbox with retries, so an outage only delays them. Health-related notes need explicit consent and personal data is cleaned up automatically, in line with GDPR.",
     stack: ["Java", "Spring Boot", "PostgreSQL", "OpenTelemetry", "Docker"],
     links: [],
+    private: true,
     sections: [
       {
         heading: "Booking flow",
@@ -185,6 +187,7 @@ export const projects: Project[] = [
       "A Counter-Strike trading platform built in a 2-person team. I owned the frontend and API integration end-to-end based on client requirements, managing tasks in Trello following Agile.",
     stack: ["Next.js", "Tailwind CSS"],
     links: [],
+    private: true,
     sections: [
       {
         heading: "My role",

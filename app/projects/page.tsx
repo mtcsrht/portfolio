@@ -27,8 +27,11 @@ export default function Projects() {
           >
             <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
               <h2 className="text-lg font-medium">{p.title}</h2>
-              {p.links.length > 0 && (
+              {(p.links.length > 0 || p.private) && (
                 <div className="flex gap-4 font-mono text-sm">
+                  {p.private && (
+                    <span className="text-muted">private project</span>
+                  )}
                   {p.links.map((l) => (
                     <a
                       key={l.href}
