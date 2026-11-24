@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About - Mate Cserhati",
-  description: "About Máté Cserháti: experience, education and skills",
+  title: "About",
+  description:
+    "Experience, education and skills of Máté Cserháti — software engineering intern at Oracle and CS BSc student at Óbuda University.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const experience = [
