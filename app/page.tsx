@@ -1,13 +1,11 @@
 import Link from "next/link";
+import { site } from "@/lib/site";
 
 const socials = [
-  { href: "https://github.com/mtcsrht", label: "github" },
-  {
-    href: "https://www.linkedin.com/in/máté-cserháti-7a654a295/",
-    label: "linkedin",
-  },
-  { href: "https://leetcode.com/u/mtcsrht/", label: "leetcode" },
-  { href: "mailto:mate.cserhati03@gmail.com", label: "email" },
+  { href: site.github, label: "github" },
+  { href: site.linkedin, label: "linkedin" },
+  { href: site.leetcode, label: "leetcode" },
+  { href: `mailto:${site.email}`, label: "email" },
 ];
 
 const now = [
@@ -16,16 +14,41 @@ const now = [
   { label: "thesis", value: "Skin lesion segmentation with deep learning" },
 ];
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  url: site.url,
+  jobTitle: "Software Engineer",
+  email: `mailto:${site.email}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Budapest",
+    addressCountry: "HU",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Óbuda University",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: "Oracle",
+  },
+  sameAs: [site.github, site.linkedin, site.leetcode],
+};
+
 export default function Home() {
   return (
     <section className="fade-up flex min-h-[60vh] flex-col justify-center py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <p className="font-mono text-sm text-muted">hi, I&#39;m</p>
       <h1 className="mt-1 text-4xl font-bold tracking-tight sm:text-5xl">
-        Máté Cserháti
+        {site.name}
       </h1>
-      <h2 className="mt-3 text-lg text-muted">
-        Software Engineer · AI / Machine Learning Student
-      </h2>
+      <h2 className="mt-3 text-lg text-muted">{site.tagline}</h2>
 
       <p className="mt-6 max-w-xl leading-relaxed">
         I build backend services and dabble in computer vision. Interested in
@@ -64,7 +87,7 @@ export default function Home() {
           see projects →
         </Link>
         <a
-          href="/resume.pdf"
+          href="/resume"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-md border border-border px-4 py-2 transition-colors hover:border-foreground"
