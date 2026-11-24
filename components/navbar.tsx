@@ -7,7 +7,7 @@ const links = [
   { href: "/", label: "home" },
   { href: "/about", label: "about" },
   { href: "/projects", label: "projects" },
-  { href: "/resume.pdf", label: "resume", external: true },
+  { href: "/resume", label: "resume", newTab: true },
 ];
 
 export default function Navbar() {
@@ -20,11 +20,11 @@ export default function Navbar() {
           mc<span className="text-accent">.</span>
         </Link>
         <ul className="flex gap-5 font-mono text-sm">
-          {links.map(({ href, label, external }) => {
-            const active = !external && pathname === href;
+          {links.map(({ href, label, newTab }) => {
+            const active = !newTab && pathname === href;
             return (
               <li key={href}>
-                {external ? (
+                {newTab ? (
                   <a
                     href={href}
                     target="_blank"
